@@ -76,3 +76,17 @@ footer:
           href: 'https://www.youtube.com/c/unstoppabledomains'
         - label: Github
           href: 'https://github.com/unstoppabledomains'
+login:
+  label: Sign in
+  userAvatar: # can be false
+    claim: picture
+    fallbackLettersClaim: name
+  userLabel: # can be false, but one of userAvatar or userLabel must be not false
+    claim: name
+    fallback: <unknown user>
+  menu:
+    - label: Apps
+      page: apps.mdx
+    - separatorLine: true
+    - label: Sign out
+      logout: true
