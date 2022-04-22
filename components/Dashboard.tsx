@@ -102,6 +102,7 @@ export async function Dashboard() {
         <hr/>
       </div>);
     }
+    return rows
   }
 
   return (   
