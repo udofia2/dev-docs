@@ -12,8 +12,8 @@ interface Developer {
   subscriptions: Record<string, boolean>;
 }
 
-const apiUrlBase = "https://admin.cloud.tyk.io"
-const apiKey = "acc12c0e8e184a824fe578dc6d0f629d"
+const apiUrlBase = "https://agreed-zootsuit-mgw.aws-use1.cloud-ara.tyk.io/tykadmin"
+const apiKey = "eyJvcmciOiI2MjU5OGI0MTgyZGJlZjAwMDFlZmY5MzMiLCJpZCI6ImM4YThkNGNjZjljNDQ0MDViMzQyYTliNmQ0MzRmOWEwIiwiaCI6Im11cm11cjEyOCJ9"
 const headers = {"Authorization": apiKey};
 
 async function getJson(path: string) {
