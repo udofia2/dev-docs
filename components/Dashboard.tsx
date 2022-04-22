@@ -86,11 +86,13 @@ export async function Dashboard() {
     }
   }
 
-  function getApps() {
-    let rows = []
-    for (const api of apisCatalogue.apis) {
-      rows.push(
-      <div>
+  return (   
+    <div>
+      <h3>Analytics</h3>
+      For the last 30 days you made: <strong>{hits}</strong> requests
+      <h3>APIs:</h3>
+      {apisCatalogue.apis.map(api => {
+        <div>
         <h2>{api.name}</h2>
         <h3>{api.shortDescription}</h3>
         <p>{api.longDescription}</p>
@@ -100,17 +102,8 @@ export async function Dashboard() {
             <button onClick={() => requestAccess(api.policy_id)}>Request access</button>
         }
         <hr/>
-      </div>);
-    }
-    return rows
-  }
-
-  return (   
-    <div>
-      <h3>Analytics</h3>
-      For the last 30 days you made: <strong>{hits}</strong> requests
-      <h3>APIs:</h3>
-      {getApps()}
+      </div>
+      })}
     </div>
   );
 }
